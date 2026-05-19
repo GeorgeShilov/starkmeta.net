@@ -1,0 +1,38 @@
+---
+import PostCard from "@/components/PostCard.astro";
+import Layout from "@/layouts/Layout.astro";
+import { getBlogPosts } from "@/lib/squidex";
+
+const posts = await getBlogPosts();
+---
+
+<Layout title="Blog">
+  <section class="section">
+    <div class="section-inner">
+      <p class="eyebrow">Blog</p>
+      <h1>Work notes for modern SaaS teams.</h1>
+      <p class="lead">
+        Practical notes on funnel signal, generated visuals, domain setup, deployment, and content
+        experiments.
+      </p>
+      <div class="post-grid">
+        {posts.map((post) => <PostCard post={post} />)}
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .post-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 42px;
+  }
+
+  @media (max-width: 900px) {
+    .post-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

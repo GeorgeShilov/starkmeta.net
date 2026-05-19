@@ -1,0 +1,52 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { site } from "@/config/site";
+---
+
+<Layout title="Contact">
+  <section class="section">
+    <div class="section-inner contact">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h1>Start a Codex Workplace work sprint.</h1>
+        <p class="lead">
+          Use this address for product briefs, AI workspace planning, visual asset generation,
+          and Cloudflare or Railway deployment work.
+        </p>
+      </div>
+      <aside class="card">
+        <h2>Email</h2>
+        <p><a href={`mailto:${site.email}`}>{site.email}</a></p>
+        <h2>Domain</h2>
+        <p>{site.domain}</p>
+      </aside>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .contact {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: 42px;
+  }
+
+  aside h2 {
+    font-size: 22px;
+  }
+
+  aside h2 + p {
+    margin-bottom: 24px;
+  }
+
+  a {
+    color: #0e7490;
+    font-weight: 800;
+  }
+
+  @media (max-width: 780px) {
+    .contact {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

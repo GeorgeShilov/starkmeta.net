@@ -1,0 +1,49 @@
+---
+import { site } from "@/config/site";
+---
+
+<section class="archive-notice">
+  <div>
+    <strong>Launch sprint</strong>
+    <p>
+      Codex Workplace is being launched as a fast SaaS site pilot: domain, generated brand assets,
+      content, deployment, and iteration all move through one repeatable workflow.
+    </p>
+  </div>
+  <a href={`mailto:${site.email}`}>Start a sprint</a>
+</section>
+
+<style>
+  .archive-notice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 16px clamp(18px, 5vw, 64px);
+    border-bottom: 1px solid #d9dee8;
+    background: #fff7ed;
+  }
+
+  strong {
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  p {
+    max-width: 860px;
+    font-size: 14px;
+  }
+
+  a {
+    flex: 0 0 auto;
+    color: #134e4a;
+    font-weight: 800;
+  }
+
+  @media (max-width: 700px) {
+    .archive-notice {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+</style>
