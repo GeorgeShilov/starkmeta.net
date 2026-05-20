@@ -15,55 +15,55 @@ export type BlogPost = {
 
 export const fallbackPosts: BlogPost[] = [
   {
-    slug: "building-persistent-worlds-on-starknet",
-    title: "Building persistent worlds on StarkNet",
+    slug: "designing-p2e-racing-games-in-unreal-engine",
+    title: "Designing P2E racing games in Unreal Engine",
     description:
-      "How StarkMeta uses StarkNet rollups to power scalable, persistent metaverse worlds with on-chain ownership.",
+      "How StarkMeta builds speed-action racing experiences with NFT rewards, dynamic cities, and Unreal Engine visuals.",
     pubDate: "2026-05-16",
     author: "StarkMeta Team",
-    category: "Infrastructure",
-    tags: ["StarkNet", "Metaverse", "Layer 2"],
+    category: "Game Dev",
+    tags: ["Unreal Engine", "P2E", "Racing"],
     featured: true,
     heroImage: "/assets/archive-grid.svg",
     inlineImages: ["/assets/identity-shield.svg", "/assets/wallet-ledger.svg"],
     articleText: `
-      <p>The metaverse cannot exist as a series of disconnected islands. For digital worlds to feel real, they must be persistent, interoperable, and owned by the people who inhabit them. StarkMeta builds on StarkNet to deliver exactly that: a Layer 2 foundation where land, identity, and assets live on-chain with negligible cost and cryptographic certainty.</p>
-      <p>StarkNet's validity rollups give us the throughput to support millions of concurrent users without congesting Ethereum mainnet. Every plot of digital real estate, every avatar customization, and every in-world transaction is settled on a zk-rollup that inherits Ethereum's security while operating at a fraction of the cost.</p>
-      <p>For developers, this means you can build immersive experiences without worrying about gas spikes or throughput ceilings. For users, it means true ownership: your assets are provably yours, portable across realms, and immune to platform shutdowns.</p>
+      <p>A racing game only feels alive when the world around it moves. StarkMeta builds speed-action racing titles on Unreal Engine where dynamic cities, animated backgrounds, and 100 types of personality-filled supercars create genuine immersion.</p>
+      <p>The play-to-earn layer is not an afterthought. Every race, drift, and jump can yield collectible NFTs that players own outright. These items are not locked to our servers. They live on-chain and can be auctioned or traded on marketplaces like OpenSea.</p>
+      <p>For players, this means skill translates to real digital ownership. For the studio, it means building an economy that survives beyond any single game update or platform policy change.</p>
     `
   },
   {
-    slug: "digital-identity-and-verifiable-avatars",
-    title: "Digital identity and verifiable avatars",
+    slug: "inside-the-ttmc-nft-collection",
+    title: "Inside the TTMC NFT collection",
     description:
-      "Why portable identity matters in the open metaverse and how StarkMeta makes avatars ownable, verifiable, and interoperable.",
+      "A look at the Tycoon Tiger MegaYacht Club: 10,000 unique tiger characters blending hip-hop, cyborg, and 200 hand-crafted traits.",
     pubDate: "2026-05-15",
     author: "StarkMeta Team",
-    category: "Identity",
-    tags: ["Digital Identity", "Avatars", "Blockchain"],
+    category: "NFTs",
+    tags: ["TTMC", "NFT Collection", "Metaverse"],
     heroImage: "/assets/archive-grid.svg",
     inlineImages: ["/assets/identity-shield.svg", "/assets/wallet-ledger.svg"],
     articleText: `
-      <p>In the physical world, your identity travels with you. In most digital worlds today, it does not. Each platform demands a new account, a new avatar, and a new reputation score. StarkMeta treats identity as infrastructure: one verifiable profile, portable across every realm in the ecosystem.</p>
-      <p>Our identity layer binds avatar metadata, reputation proofs, and credential attestations to a StarkNet address. This gives users a single sign-on for the metaverse and gives builders a trust layer they can rely on for gating, governance, and commerce.</p>
-      <p>The result is an open standard for who you are online. No more locked-in profiles. No more starting from zero on every new world. Just one identity, owned by you, verifiable by anyone.</p>
+      <p>The Tycoon Tiger MegaYacht Club is StarkMeta's flagship character collection. Ten thousand unique tigers, each assembled from over two hundred possible traits ranging from classic hip-hop style to full cyborg augmentation. Every tiger carries on-chain metadata that proves its rarity and origin.</p>
+      <p>TTMC holders are not just collectors. They become part of the studio's creative loop: early access to new game builds, input on world design, and whitelist spots for future drops. The collection is designed as a membership layer, not a static JPEG set.</p>
+      <p>Rarity is transparent. Provenance is verifiable. And because the contract is standard ERC-721, every tiger can be traded, collateralized, or imported into any compatible metaverse world.</p>
     `
   },
   {
-    slug: "on-chain-economies-for-digital-realms",
-    title: "On-chain economies for digital realms",
+    slug: "metaverse-real-estate-and-city-of-tycoon-3d",
+    title: "Metaverse real estate and City of Tycoon 3D",
     description:
-      "A practical look at how StarkMeta enables creator economies, land markets, and in-world commerce using Cairo smart contracts.",
+      "How StarkMeta uses Unreal Engine to build persistent metaverse real estate where players own land, build assets, and trade property.",
     pubDate: "2026-05-14",
     author: "StarkMeta Team",
-    category: "Economy",
-    tags: ["StarkNet", "Creator Economy", "Smart Contracts"],
+    category: "Real Estate",
+    tags: ["Metaverse", "Real Estate", "Unreal Engine"],
     heroImage: "/assets/archive-grid.svg",
     inlineImages: ["/assets/identity-shield.svg", "/assets/wallet-ledger.svg"],
     articleText: `
-      <p>Economies are what make worlds feel alive. StarkMeta provides the smart contract primitives for land sales, creator royalties, and in-world marketplaces, all written in Cairo and deployed on StarkNet. This gives realm builders a turnkey economic layer they can customize without rebuilding from scratch.</p>
-      <p>Land parcels are represented as NFTs with programmable zoning, lease terms, and development rights. Creators can mint wearables, tools, and experiences as tradable assets with embedded royalty logic. And because everything settles on a validity rollup, transaction fees stay low enough for micro-payments and high-frequency trading.</p>
-      <p>The most important design choice is composability. Every contract is designed to be called by other contracts, which means economies can interact across realms. A sword forged in one world can be wielded in another. A currency earned in a game can be spent in a gallery. That is the promise of an open metaverse, and StarkMeta is building the rails.</p>
+      <p>Land in the metaverse should feel as tangible as land in the physical world. City of Tycoon 3D is StarkMeta's Unreal Engine-based real estate layer where parcels are ownable, developable, and tradable.</p>
+      <p>Each plot is minted as an NFT with programmable zoning and development rights. Owners can construct structures, lease space to other players, or hold parcels as speculative assets. The graphics engine renders these properties in full 3D with dynamic lighting and day-night cycles.</p>
+      <p>The economy is built around scarcity and utility. Prime locations near transit hubs or event arenas command higher value. Development fees and lease income flow back to landowners in SMETA tokens. This is not a map with pins. It is a city that breathes.</p>
     `
   }
 ];

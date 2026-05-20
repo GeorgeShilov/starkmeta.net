@@ -9,33 +9,33 @@ const posts = await getBlogPosts();
 const featured = posts.find((post) => post.featured) || posts[0];
 ---
 
-<Layout title="StarkMeta / Metaverse infrastructure" description={site.description}>
+<Layout title="StarkMeta / Unreal Engine Metaverse" description={site.description}>
   <ArchiveNotice />
   <section class="hero">
     <div class="hero-copy">
-      <p class="eyebrow">StarkMeta / Metaverse infrastructure</p>
-      <h1>Build worlds. Own realms. Scale on StarkNet.</h1>
+      <p class="eyebrow">StarkMeta / Unreal Engine Metaverse</p>
+      <h1>Metaverse P2E games based on Unreal Engine.</h1>
       <p class="lead">
-        StarkMeta provides the infrastructure layer for persistent metaverse worlds, on-chain digital
-        identity, and scalable blockchain economies powered by StarkNet.
+        StarkMeta is a metaverse studio building immersive play-to-earn NFT games, dynamic digital
+        worlds, and collectible NFT experiences powered by Unreal Engine.
       </p>
       <div class="button-row">
-        <a class="button" href="/gateway/">Explore command OS</a>
-        <a class="button secondary" href="/blog/">Read field notes</a>
+        <a class="button" href="/games/">Explore games</a>
+        <a class="button secondary" href="/blog/">Read updates</a>
       </div>
     </div>
     <div class="hero-panel" aria-label="StarkMeta signal summary">
       <div>
-        <span>Core view</span>
-        <strong>Metaverse &amp; blockchain control</strong>
+        <span>Core focus</span>
+        <strong>Unreal Engine metaverse &amp; P2E games</strong>
       </div>
       <div>
-        <span>Signals</span>
-        <strong>Worlds, identity, on-chain economy</strong>
+        <span>Features</span>
+        <strong>NFT collecting, racing, open worlds</strong>
       </div>
       <div>
-        <span>Chain layer</span>
-        <strong>StarkNet validity rollup</strong>
+        <span>Economy</span>
+        <strong>SMETA rewards &amp; OpenSea trading</strong>
       </div>
     </div>
   </section>
@@ -44,7 +44,7 @@ const featured = posts.find((post) => post.featured) || posts[0];
     <div class="section-inner split">
       <div>
         <p class="eyebrow">Why it exists</p>
-        <h2>The metaverse needs infrastructure before it needs hype.</h2>
+        <h2>The metaverse needs games before it needs hype.</h2>
       </div>
       <div class="history-list">
         {site.launchContext.map((item) => <p>{item}</p>)}
@@ -54,20 +54,20 @@ const featured = posts.find((post) => post.featured) || posts[0];
 
   <section class="section">
     <div class="section-inner">
-      <p class="eyebrow">Command architecture</p>
-      <h2>One protocol layer for the open metaverse.</h2>
+      <p class="eyebrow">Game architecture</p>
+      <h2>One studio. Multiple worlds. True ownership.</h2>
       <div class="grid">
         <article class="card">
-          <h3>Realm engine</h3>
-          <p>Deploy persistent worlds with on-chain land, ownership, and provable state.</p>
+          <h3>Unreal worlds</h3>
+          <p>Dynamic cities, open worlds, and racing arenas built with Unreal Engine graphics.</p>
         </article>
         <article class="card">
-          <h3>Identity layer</h3>
-          <p>Portable avatars and verifiable reputation across every connected world.</p>
+          <h3>NFT collecting</h3>
+          <p>In-game NFTs scattered through play, tradable on OpenSea with embedded rarity.</p>
         </article>
         <article class="card">
-          <h3>Economy protocol</h3>
-          <p>Cairo smart contracts for creator royalties, marketplaces, and cross-realm assets.</p>
+          <h3>P2E economy</h3>
+          <p>SMETA rewards, creator royalties, and marketplace contracts for cross-game assets.</p>
         </article>
       </div>
     </div>
@@ -76,8 +76,8 @@ const featured = posts.find((post) => post.featured) || posts[0];
   {featured && (
     <section class="section band">
       <div class="section-inner">
-        <p class="eyebrow">Featured note</p>
-        <h2>Start with realm command.</h2>
+        <p class="eyebrow">Featured update</p>
+        <h2>Latest from the studio.</h2>
         <PostCard post={featured} />
       </div>
     </section>
