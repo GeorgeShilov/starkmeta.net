@@ -21,16 +21,17 @@ const { post } = Astro.props as { post: BlogPost };
     display: grid;
     grid-template-rows: 180px 1fr;
     overflow: hidden;
-    border: 1px solid #d9dee8;
+    border: 1px solid rgba(6, 182, 212, 0.2);
     border-radius: 8px;
-    background: #fff;
+    background: rgba(10, 10, 30, 0.8);
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.08);
   }
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    background: #eef6f5;
+    background: #0a0a1e;
   }
 
   div {
@@ -39,13 +40,22 @@ const { post } = Astro.props as { post: BlogPost };
 
   .meta {
     margin-bottom: 10px;
-    color: #0f766e;
+    color: #06b6d4;
     font-size: 13px;
     font-weight: 800;
   }
 
+  h3 {
+    color: #ecfeff;
+  }
+
   h3 a:hover {
-    color: #0f766e;
+    color: #06b6d4;
+    text-shadow: 0 0 8px rgba(6, 182, 212, 0.4);
+  }
+
+  p {
+    color: #67e8f9;
   }
 
   .tags {
@@ -57,11 +67,12 @@ const { post } = Astro.props as { post: BlogPost };
   }
 
   span {
-    border: 1px solid #d9dee8;
+    border: 1px solid rgba(6, 182, 212, 0.25);
     border-radius: 999px;
     padding: 4px 9px;
-    color: #5c6676;
+    color: #67e8f9;
     font-size: 12px;
     font-weight: 700;
+    background: rgba(6, 182, 212, 0.08);
   }
 </style>

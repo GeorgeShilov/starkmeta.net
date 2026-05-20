@@ -66,17 +66,17 @@ const description = Astro.props.description || site.description;
 
 <style is:global>
   :root {
-    color-scheme: light;
-    --ink: #111827;
-    --muted: #5c6676;
-    --line: #d9dee8;
-    --panel: #ffffff;
-    --soft: #f6f8fb;
+    color-scheme: dark;
+    --ink: #ecfeff;
+    --muted: #67e8f9;
+    --line: rgba(6, 182, 212, 0.2);
+    --panel: rgba(10, 10, 30, 0.8);
+    --soft: #050510;
     --accent: #06b6d4;
-    --accent-strong: #0e7490;
+    --accent-strong: #3b82f6;
     --gold: #f97316;
-    --blue: #2563eb;
-    --shadow: 0 18px 50px rgba(17, 24, 39, 0.1);
+    --blue: #3b82f6;
+    --shadow: 0 18px 50px rgba(6, 182, 212, 0.15);
     font-family:
       Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   }
@@ -111,8 +111,8 @@ const description = Astro.props.description || site.description;
     justify-content: space-between;
     gap: 24px;
     padding: 16px clamp(18px, 5vw, 64px);
-    border-bottom: 1px solid rgba(217, 222, 232, 0.88);
-    background: rgba(255, 255, 255, 0.92);
+    border-bottom: 1px solid rgba(6, 182, 212, 0.2);
+    background: rgba(5, 5, 16, 0.92);
     backdrop-filter: blur(18px);
   }
 
@@ -131,9 +131,10 @@ const description = Astro.props.description || site.description;
     height: 34px;
     place-items: center;
     border-radius: 8px;
-    background: linear-gradient(135deg, #111827, #06b6d4);
+    background: linear-gradient(135deg, #06b6d4, #3b82f6);
     color: #fff;
     font-size: 17px;
+    box-shadow: 0 0 12px rgba(6, 182, 212, 0.4);
   }
 
   .site-nav {
@@ -146,7 +147,8 @@ const description = Astro.props.description || site.description;
   }
 
   .site-nav a:hover {
-    color: var(--accent-strong);
+    color: var(--accent);
+    text-shadow: 0 0 8px rgba(6, 182, 212, 0.5);
   }
 
   .menu-button {
@@ -157,7 +159,7 @@ const description = Astro.props.description || site.description;
     place-items: center;
     border: 1px solid var(--line);
     border-radius: 8px;
-    background: #fff;
+    background: rgba(10, 10, 30, 0.8);
   }
 
   .menu-button span {
@@ -165,7 +167,7 @@ const description = Astro.props.description || site.description;
     width: 18px;
     height: 2px;
     margin: 3px auto;
-    background: var(--ink);
+    background: var(--accent);
   }
 
   .section {
@@ -179,7 +181,7 @@ const description = Astro.props.description || site.description;
 
   .eyebrow {
     margin: 0 0 14px;
-    color: var(--accent-strong);
+    color: var(--accent);
     font-size: 13px;
     font-weight: 800;
     letter-spacing: 0.08em;
@@ -223,7 +225,7 @@ const description = Astro.props.description || site.description;
   .lead {
     max-width: 720px;
     margin-top: 24px;
-    color: #384252;
+    color: #a5f3fc;
     font-size: clamp(18px, 2vw, 22px);
   }
 
@@ -241,16 +243,27 @@ const description = Astro.props.description || site.description;
     justify-content: center;
     border-radius: 8px;
     padding: 12px 18px;
-    border: 1px solid var(--ink);
-    background: var(--ink);
+    border: 1px solid var(--accent);
+    background: linear-gradient(135deg, #06b6d4, #3b82f6);
     color: #fff;
     font-weight: 760;
+    box-shadow: 0 0 16px rgba(6, 182, 212, 0.3);
+    transition: box-shadow 0.2s ease;
+  }
+
+  .button:hover {
+    box-shadow: 0 0 24px rgba(6, 182, 212, 0.5);
   }
 
   .button.secondary {
-    border-color: var(--line);
-    background: #fff;
+    border-color: rgba(6, 182, 212, 0.35);
+    background: transparent;
     color: var(--ink);
+    box-shadow: none;
+  }
+
+  .button.secondary:hover {
+    box-shadow: 0 0 16px rgba(6, 182, 212, 0.2);
   }
 
   .grid {
@@ -260,15 +273,17 @@ const description = Astro.props.description || site.description;
   }
 
   .card {
-    border: 1px solid var(--line);
+    border: 1px solid rgba(6, 182, 212, 0.2);
     border-radius: 8px;
-    background: var(--panel);
+    background: rgba(10, 10, 30, 0.8);
     padding: 24px;
-    box-shadow: 0 1px 0 rgba(17, 24, 39, 0.03);
+    box-shadow: 0 1px 0 rgba(6, 182, 212, 0.05);
   }
 
   .band {
-    background: #fff;
+    background: rgba(10, 10, 30, 0.5);
+    border-top: 1px solid rgba(6, 182, 212, 0.1);
+    border-bottom: 1px solid rgba(6, 182, 212, 0.1);
   }
 
   .site-footer {
@@ -278,7 +293,7 @@ const description = Astro.props.description || site.description;
     gap: 32px;
     padding: 44px clamp(18px, 5vw, 64px);
     border-top: 1px solid var(--line);
-    background: #fff;
+    background: #050510;
   }
 
   .site-footer p {
@@ -295,13 +310,18 @@ const description = Astro.props.description || site.description;
     font-weight: 650;
   }
 
+  .footer-links a:hover {
+    color: var(--accent);
+    text-shadow: 0 0 8px rgba(6, 182, 212, 0.5);
+  }
+
   .article-body {
     max-width: 760px;
   }
 
   .article-body p,
   .article-body li {
-    color: #354052;
+    color: #a5f3fc;
     font-size: 18px;
   }
 

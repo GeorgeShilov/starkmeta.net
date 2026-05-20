@@ -93,10 +93,10 @@ const featured = posts.find((post) => post.featured) || posts[0];
     align-items: center;
     padding: clamp(58px, 8vw, 110px) clamp(18px, 5vw, 64px) clamp(42px, 6vw, 80px);
     background:
-      radial-gradient(ellipse at 20% 20%, rgba(88, 28, 135, 0.35) 0%, transparent 60%),
-      radial-gradient(ellipse at 80% 80%, rgba(30, 58, 138, 0.35) 0%, transparent 60%),
-      linear-gradient(135deg, #0b0f19 0%, #0f172a 40%, #1e1b4b 70%, #0f172a 100%);
-    color: #fff;
+      radial-gradient(ellipse at 20% 20%, rgba(6, 182, 212, 0.25) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 80%, rgba(59, 130, 246, 0.25) 0%, transparent 60%),
+      linear-gradient(135deg, #050510 0%, #0a0a1e 40%, #050510 70%, #0a0a1e 100%);
+    color: #ecfeff;
   }
 
   .hero-copy {
@@ -104,33 +104,43 @@ const featured = posts.find((post) => post.featured) || posts[0];
   }
 
   .hero .lead {
-    color: rgba(255, 255, 255, 0.78);
+    color: rgba(103, 232, 249, 0.85);
   }
 
   .hero .button {
-    background: var(--accent);
-    border-color: var(--accent);
-    color: #0b1220;
+    background: linear-gradient(135deg, #06b6d4, #3b82f6);
+    border-color: transparent;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.35);
+  }
+
+  .hero .button:hover {
+    box-shadow: 0 0 28px rgba(6, 182, 212, 0.55);
   }
 
   .hero .button.secondary {
     background: transparent;
-    border-color: rgba(255, 255, 255, 0.35);
-    color: #fff;
+    border-color: rgba(6, 182, 212, 0.35);
+    color: #ecfeff;
+    box-shadow: none;
+  }
+
+  .hero .button.secondary:hover {
+    box-shadow: 0 0 16px rgba(6, 182, 212, 0.2);
   }
 
   .hero-panel {
     display: grid;
     gap: 12px;
     padding: 18px;
-    border: 1px solid rgba(17, 24, 39, 0.14);
+    border: 1px solid rgba(6, 182, 212, 0.2);
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.92);
-    box-shadow: var(--shadow);
+    background: rgba(10, 10, 30, 0.8);
+    box-shadow: 0 0 30px rgba(6, 182, 212, 0.1);
   }
 
   .hero-panel div {
-    border-bottom: 1px solid #d9dee8;
+    border-bottom: 1px solid rgba(6, 182, 212, 0.15);
     padding: 14px;
   }
 
@@ -140,7 +150,7 @@ const featured = posts.find((post) => post.featured) || posts[0];
 
   .hero-panel span {
     display: block;
-    color: #5c6676;
+    color: #67e8f9;
     font-size: 13px;
     font-weight: 800;
   }
@@ -148,7 +158,7 @@ const featured = posts.find((post) => post.featured) || posts[0];
   .hero-panel strong {
     display: block;
     margin-top: 5px;
-    color: #101828;
+    color: #ecfeff;
     font-size: 20px;
     line-height: 1.2;
   }
@@ -167,6 +177,7 @@ const featured = posts.find((post) => post.featured) || posts[0];
   .history-list p {
     border-left: 4px solid #06b6d4;
     padding-left: 16px;
+    color: #a5f3fc;
   }
 
   @media (max-width: 860px) {
