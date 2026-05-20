@@ -74,7 +74,7 @@ function mapItem(item: SquidexItem): BlogPost {
     pubDate: item.data.pubDate?.iv || new Date().toISOString(),
     heroImage: item.data.heroImage?.iv || "/assets/archive-grid.svg",
     inlineImages: parseTags(item.data.inlineImages?.iv),
-    author: item.data.author?.iv || "Codex Workplace Studio",
+    author: item.data.author?.iv || "StarkMeta Studio",
     category: item.data.category?.iv || "Research",
     tags: parseTags(item.data.tags?.iv),
     referenceUrl: item.data.referenceUrl?.iv,

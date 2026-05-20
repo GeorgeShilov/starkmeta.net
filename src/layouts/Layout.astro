@@ -153,6 +153,7 @@ const description = Astro.props.description || site.description;
     display: none;
     width: 42px;
     height: 42px;
+    flex-shrink: 0;
     place-items: center;
     border: 1px solid var(--line);
     border-radius: 8px;
@@ -273,6 +274,7 @@ const description = Astro.props.description || site.description;
   .site-footer {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     gap: 32px;
     padding: 44px clamp(18px, 5vw, 64px);
     border-top: 1px solid var(--line);
@@ -322,7 +324,7 @@ const description = Astro.props.description || site.description;
     }
 
     .menu-button {
-      display: block;
+      display: grid;
     }
 
     .site-nav {
