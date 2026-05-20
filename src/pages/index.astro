@@ -93,8 +93,9 @@ const featured = posts.find((post) => post.featured) || posts[0];
     align-items: center;
     padding: clamp(58px, 8vw, 110px) clamp(18px, 5vw, 64px) clamp(42px, 6vw, 80px);
     background:
-      linear-gradient(135deg, rgba(2, 6, 23, 0.9), rgba(8, 47, 73, 0.68)),
-      url("/assets/fal/hero-background.png") center / cover no-repeat;
+      radial-gradient(ellipse at 20% 20%, rgba(88, 28, 135, 0.35) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 80%, rgba(30, 58, 138, 0.35) 0%, transparent 60%),
+      linear-gradient(135deg, #0b0f19 0%, #0f172a 40%, #1e1b4b 70%, #0f172a 100%);
     color: #fff;
   }
 

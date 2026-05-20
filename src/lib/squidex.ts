@@ -72,7 +72,7 @@ function mapItem(item: SquidexItem): BlogPost {
     title,
     description: item.data.description?.iv || "",
     pubDate: item.data.pubDate?.iv || new Date().toISOString(),
-    heroImage: item.data.heroImage?.iv || "/assets/fal/blog-launch-cover.png",
+    heroImage: item.data.heroImage?.iv || "/assets/archive-grid.svg",
     inlineImages: parseTags(item.data.inlineImages?.iv),
     author: item.data.author?.iv || "Codex Workplace Studio",
     category: item.data.category?.iv || "Research",
