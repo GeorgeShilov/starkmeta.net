@@ -6,7 +6,10 @@ import { site } from "@/config/site";
 import { getBlogPosts } from "@/lib/squidex";
 
 const posts = await getBlogPosts();
-const featured = posts.find((post) => post.featured) || posts[0];
+const sorted = [...posts].sort(
+  (a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime()
+);
+const latest3 = sorted.slice(0, 3);
 ---
 
 <Layout title="StarkMeta / Unreal Engine Metaverse" description={site.description}>
@@ -73,12 +76,14 @@ const featured = posts.find((post) => post.featured) || posts[0];
     </div>
   </section>
 
-  {featured && (
+  {latest3.length > 0 && (
     <section class="section band">
       <div class="section-inner">
-        <p class="eyebrow">Featured update</p>
-        <h2>Latest from the studio.</h2>
-        <PostCard post={featured} />
+        <p class="eyebrow">Latest updates</p>
+        <h2>Fresh news from the StarkMeta studio.</h2>
+        <div class="latest-row">
+          {latest3.map((post) => <PostCard post={post} />)}
+        </div>
       </div>
     </section>
   )}
@@ -180,6 +185,13 @@ const featured = posts.find((post) => post.featured) || posts[0];
     color: #a5f3fc;
   }
 
+  .latest-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 36px;
+  }
+
   @media (max-width: 860px) {
     .hero,
     .split {
@@ -191,6 +203,11 @@ const featured = posts.find((post) => post.featured) || posts[0];
       background-size: 720px;
       background-position: center bottom;
       padding-bottom: 300px;
+    }
+
+    .latest-row {
+      grid-template-columns: 1fr;
+      gap: 20px;
     }
   }
 </style>
