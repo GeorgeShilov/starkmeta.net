@@ -1,5 +1,4 @@
 ---
-import ArchiveNotice from "@/components/ArchiveNotice.astro";
 import PostCard from "@/components/PostCard.astro";
 import Layout from "@/layouts/Layout.astro";
 import { site } from "@/config/site";
@@ -13,7 +12,6 @@ const latest3 = sorted.slice(0, 3);
 ---
 
 <Layout title="StarkMeta / Unreal Engine Metaverse" description={site.description}>
-  <ArchiveNotice />
   <section class="hero">
     <div class="hero-copy">
       <p class="eyebrow">StarkMeta / Unreal Engine Metaverse</p>
