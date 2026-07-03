@@ -23,7 +23,7 @@ export const fallbackPosts: BlogPost[] = [
     category: "General",
     tags: [],
     featured: false,
-    heroImage: "/assets/archive-grid.svg",
+    heroImage: "https://v3b.fal.media/files/b/0aa0bfd4/Bd9scYMTUJvnSoKxMYxZX.jpg",
     inlineImages: [],
     referenceUrl: "https://guarda.com/",
     articleText: `
@@ -174,7 +174,7 @@ export const fallbackPosts: BlogPost[] = [
     category: "Game Dev",
     tags: ["Unreal Engine", "P2E", "Racing"],
     featured: true,
-    heroImage: "/assets/archive-grid.svg",
+    heroImage: "https://v3b.fal.media/files/b/0aa0bfd4/nqumwJIKYlxFsGI3EEsKq.jpg",
     inlineImages: ["/assets/identity-shield.svg", "/assets/wallet-ledger.svg"],
     articleText: `
       <p>A racing game only feels alive when the world around it moves. StarkMeta builds speed-action racing titles on Unreal Engine where dynamic cities, animated backgrounds, and 100 types of personality-filled supercars create genuine immersion.</p>
@@ -191,7 +191,7 @@ export const fallbackPosts: BlogPost[] = [
     author: "StarkMeta Team",
     category: "NFTs",
     tags: ["TTMC", "NFT Collection", "Metaverse"],
-    heroImage: "/assets/archive-grid.svg",
+    heroImage: "https://v3b.fal.media/files/b/0aa0bfd5/v1lRDcoCet3s5redcXFRc.jpg",
     inlineImages: ["/assets/identity-shield.svg", "/assets/wallet-ledger.svg"],
     articleText: `
       <p>The Tycoon Tiger MegaYacht Club is StarkMeta's flagship character collection. Ten thousand unique tigers, each assembled from over two hundred possible traits ranging from classic hip-hop style to full cyborg augmentation. Every tiger carries on-chain metadata that proves its rarity and origin.</p>
@@ -208,7 +208,7 @@ export const fallbackPosts: BlogPost[] = [
     author: "StarkMeta Team",
     category: "Real Estate",
     tags: ["Metaverse", "Real Estate", "Unreal Engine"],
-    heroImage: "/assets/archive-grid.svg",
+    heroImage: "https://v3b.fal.media/files/b/0aa0bfd5/b3QQdG2LYqaLggCNVtLDf.jpg",
     inlineImages: ["/assets/identity-shield.svg", "/assets/wallet-ledger.svg"],
     articleText: `
       <p>Land in the metaverse should feel as tangible as land in the physical world. City of Tycoon 3D is StarkMeta's Unreal Engine-based real estate layer where parcels are ownable, developable, and tradable.</p>
@@ -225,7 +225,7 @@ export const fallbackPosts: BlogPost[] = [
     author: "StarkMeta Team",
     category: "Technology",
     tags: ["Unreal Engine 5", "Nanite", "Lumen", "Metaverse", "Game Development"],
-    heroImage: "/assets/archive-grid.svg",
+    heroImage: "https://v3b.fal.media/files/b/0aa0bfdf/UuzIgBqYzsOh9MMK2CA08.jpg",
     inlineImages: ["/assets/identity-shield.svg", "/assets/wallet-ledger.svg"],
     articleText: `
       <p>The metaverse has long been imagined as a boundless digital frontier where millions of users coexist, create, and compete in visually stunning persistent worlds. Yet for years, the technical gap between that vision and reality remained stubbornly wide. Traditional game engines struggled to balance the sheer geometric complexity of massive open worlds with the real-time performance demands of multiplayer networking and cross-platform deployment. Then came Unreal Engine 5, and the rules of the game changed entirely. At StarkMeta, we made the decision early to build our entire play-to-earn ecosystem on UE5 because we believe it is not merely an incremental upgrade but a paradigm shift in how immersive worlds are authored, rendered, and experienced. From Nanite's virtualized geometry to Lumen's fully dynamic global illumination, UE5 removes the hard ceilings that previously forced developers to compromise between scale and fidelity.</p>
