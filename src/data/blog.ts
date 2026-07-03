@@ -23,7 +23,7 @@ export const fallbackPosts: BlogPost[] = [
     category: "General",
     tags: [],
     featured: false,
-    heroImage: "https://v3b.fal.media/files/b/0aa0bf68/a05yKIgnf3VXdXsGQ06YT.jpg",
+    heroImage: "/assets/archive-grid.svg",
     inlineImages: [],
     referenceUrl: "https://guarda.com/",
     articleText: `
@@ -161,7 +161,10 @@ export const fallbackPosts: BlogPost[] = [
 </table>
 <h2 id="final-thoughts">Final Thoughts</h2>
 <p>Choosing the best Cardano wallet comes down to balancing security, convenience, and the features you actually use. A hardware wallet offers maximum protection for long-term holdings, while a mobile or browser wallet makes everyday transactions and staking simple. For those who want flexibility, using a combination of both often provides the best of all worlds.</p>
-<p>Take time to explore each wallet’s interface, read recent community feedback, and test with a small amount of ADA before committing larger balances. The right wallet should feel secure, intuitive, and aligned with how you plan to participate in {
+<p>Take time to explore each wallet’s interface, read recent community feedback, and test with a small amount of ADA before committing larger balances. The right wallet should feel secure, intuitive, and aligned with how you plan to participate in the Cardano ecosystem.</p>
+    `
+  },
+  {
     slug: "designing-p2e-racing-games-in-unreal-engine",
     title: "Designing P2E racing games in Unreal Engine",
     description:
@@ -171,13 +174,15 @@ export const fallbackPosts: BlogPost[] = [
     category: "Game Dev",
     tags: ["Unreal Engine", "P2E", "Racing"],
     featured: true,
-    heroImage: "https://v3b.fal.media/files/b/0aa0bf69/zJR7Qx0aHdtM5UkSeqqmB.jpg",
-    inlineImages:ets/archive-grid.svg",
+    heroImage: "/assets/archive-grid.svg",
     inlineImages: ["/assets/identity-shield.svg", "/assets/wallet-ledger.svg"],
     articleText: `
       <p>A racing game only feels alive when the world around it moves. StarkMeta builds speed-action racing titles on Unreal Engine where dynamic cities, animated backgrounds, and 100 types of personality-filled supercars create genuine immersion.</p>
       <p>The play-to-earn layer is not an afterthought. Every race, drift, and jump can yield collectible NFTs that players own outright. These items are not locked to our servers. They live on-chain and can be auctioned or traded on marketplaces like OpenSea.</p>
-      <p>For players, this means skill translates to real digital ownership. For the studio, it means building an economy that sur{
+      <p>For players, this means skill translates to real digital ownership. For the studio, it means building an economy that survives beyond any single game update or platform policy change.</p>
+    `
+  },
+  {
     slug: "inside-the-ttmc-nft-collection",
     title: "Inside the TTMC NFT collection",
     description:
@@ -186,14 +191,15 @@ export const fallbackPosts: BlogPost[] = [
     author: "StarkMeta Team",
     category: "NFTs",
     tags: ["TTMC", "NFT Collection", "Metaverse"],
-    heroImage: "https://v3b.fal.media/files/b/0aa0bf69/qhjgXFpvFqC2xfPXyinpO.jpg",
-    inlineImages:ion", "Metaverse"],
     heroImage: "/assets/archive-grid.svg",
     inlineImages: ["/assets/identity-shield.svg", "/assets/wallet-ledger.svg"],
     articleText: `
       <p>The Tycoon Tiger MegaYacht Club is StarkMeta's flagship character collection. Ten thousand unique tigers, each assembled from over two hundred possible traits ranging from classic hip-hop style to full cyborg augmentation. Every tiger carries on-chain metadata that proves its rarity and origin.</p>
       <p>TTMC holders are not just collectors. They become part of the studio's creative loop: early access to new game builds, input on world design, and whitelist spots for future drops. The collection is designed as a membership layer, not a static JPEG set.</p>
-      <p>Rarity is transparent. Provenance is verifiable. And because the contract is standar{
+      <p>Rarity is transparent. Provenance is verifiable. And because the contract is standard ERC-721, every tiger can be traded, collateralized, or imported into any compatible metaverse world.</p>
+    `
+  },
+  {
     slug: "metaverse-real-estate-and-city-of-tycoon-3d",
     title: "Metaverse real estate and City of Tycoon 3D",
     description:
@@ -202,15 +208,15 @@ export const fallbackPosts: BlogPost[] = [
     author: "StarkMeta Team",
     category: "Real Estate",
     tags: ["Metaverse", "Real Estate", "Unreal Engine"],
-    heroImage: "https://v3b.fal.media/files/b/0aa0bf69/NOeTTHHVn9lz0YubeEKvK.jpg",
-    inlineImages:",
-    tags: ["Metaverse", "Real Estate", "Unreal Engine"],
     heroImage: "/assets/archive-grid.svg",
     inlineImages: ["/assets/identity-shield.svg", "/assets/wallet-ledger.svg"],
     articleText: `
       <p>Land in the metaverse should feel as tangible as land in the physical world. City of Tycoon 3D is StarkMeta's Unreal Engine-based real estate layer where parcels are ownable, developable, and tradable.</p>
       <p>Each plot is minted as an NFT with programmable zoning and development rights. Owners can construct structures, lease space to other players, or hold parcels as speculative assets. The graphics engine renders these properties in full 3D with dynamic lighting and day-night cycles.</p>
-      <p>The economy is built around scarcity and utility. Prime locations near transit hubs or event arenas command hig{
+      <p>The economy is built around scarcity and utility. Prime locations near transit hubs or event arenas command higher value. Development fees and lease income flow back to landowners in SMETA tokens. This is not a map with pins. It is a city that breathes.</p>
+    `
+  },
+  {
     slug: "building-immersive-worlds-why-unreal-engine-5-is-the-future-of-metaverse-gaming",
     title: "Building Immersive Worlds: Why Unreal Engine 5 Is the Future of Metaverse Gaming",
     description:
@@ -218,9 +224,6 @@ export const fallbackPosts: BlogPost[] = [
     pubDate: "2026-05-20",
     author: "StarkMeta Team",
     category: "Technology",
-    tags: ["Unreal Engine 5", "Nanite", "Lumen", "Metaverse", "Game Development"],
-    heroImage: "https://v3b.fal.media/files/b/0aa0bf69/8Iz1lUtB-js79vGIgUw92.jpg",
-    inlineImages:y: "Technology",
     tags: ["Unreal Engine 5", "Nanite", "Lumen", "Metaverse", "Game Development"],
     heroImage: "/assets/archive-grid.svg",
     inlineImages: ["/assets/identity-shield.svg", "/assets/wallet-ledger.svg"],
