@@ -103,4 +103,45 @@ const { post } = Astro.props;
     }
   }
   .article-body :global(img) { max-width: 100%; height: auto; display: block; margin: 1.5rem 0; }
+
+  /* Mobile overflow containment */
+  .content,
+  .article-body,
+  .prose {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    min-width: 0;
+  }
+
+  .content :global(table),
+  .article-body :global(table),
+  :global(.prose table) {
+    display: block;
+    overflow-x: auto;
+    max-width: 100%;
+  }
+
+  .content :global(pre),
+  .article-body :global(pre),
+  :global(.prose pre) {
+    overflow-x: auto;
+    white-space: pre;
+    word-break: normal;
+    max-width: 100%;
+  }
+
+  .content :global(a),
+  .article-body :global(a),
+  :global(.prose a) {
+    overflow-wrap: anywhere;
+  }
+
+  @media (max-width: 600px) {
+    .blog-post,
+    .post {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
 </style>
