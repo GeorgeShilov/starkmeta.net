@@ -15,14 +15,6 @@ const { post } = Astro.props;
 
 <Layout title={post.title} description={post.description}>
   <article>
-    <header class="article-hero">
-      <div class="section-inner">
-        <p class="eyebrow">{post.category} / {new Date(post.pubDate).toLocaleDateString("en-US")}</p>
-        <h1>{post.title}</h1>
-        <p class="lead">{post.description}</p>
-        <img class="article-cover" src={post.heroImage} alt="" />
-      </div>
-    </header>
     <section class="section band">
       <div class="section-inner article-layout">
         <div>
@@ -45,11 +37,6 @@ const { post } = Astro.props;
 </Layout>
 
 <style>
-  .article-hero {
-    padding: clamp(58px, 8vw, 104px) clamp(18px, 5vw, 64px);
-    background: #e8f4f4;
-  }
-
   .article-cover {
     width: 100%;
     max-height: 420px;
