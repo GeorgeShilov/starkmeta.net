@@ -14,6 +14,13 @@ const { post } = Astro.props;
 ---
 
 <Layout title={post.title} description={post.description}>
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><span aria-current="page">{post.title}</span></li>
+    </ol>
+  </nav>
   <article>
     <section class="section band">
       <div class="section-inner article-layout">
@@ -28,6 +35,7 @@ const { post } = Astro.props;
         <aside class="card">
           <h2>Article details</h2>
           <p><strong>Author</strong><br />{post.author}</p>
+          <p><strong>Published</strong><br />{new Date(post.pubDate).toLocaleDateString("ru-RU")}</p>
           <p><strong>Tags</strong><br />{post.tags.join(", ")}</p>
           {post.referenceUrl && <p><strong>Reference</strong><br /><a href={post.referenceUrl} target="_blank" rel="noreferrer">Open source</a></p>}
         </aside>
@@ -77,8 +85,12 @@ const { post } = Astro.props;
   }
 
   a {
-    color: #0f766e;
-    font-weight: 800;
+    color: var(--accent);
+    font-weight: 700;
+    text-decoration: underline;
+  }
+  a:hover {
+    color: var(--gold, var(--accent-strong));
   }
 
   @media (max-width: 860px) {
