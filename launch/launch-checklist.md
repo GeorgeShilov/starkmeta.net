@@ -159,7 +159,32 @@ Before final deploy, confirm:
 - generated prompt metadata is kept beside images in `public/assets/fal`
 - hero and blog images were checked in browser for contrast and cropping
 
-## 8. Frontend Visual QA
+## 8. CTA Lead-Capture Requirement
+
+Every conversion CTA must open a lead-capture form instead of linking to a generic page, blog index, or direct `mailto:` action.
+
+Required behavior:
+
+- This applies to all conversion CTAs in the header, hero, pricing, service, assessment, demo, contact, and final CTA sections.
+- CTA clicks must open an accessible modal, drawer, or dedicated form page.
+- The form must collect at least `name` and one contact method: `email` or `phone`.
+- Add a short optional message/project-details field when it fits the CTA intent.
+- Required fields must use visible labels, client-side validation, clear errors, keyboard navigation, and an explicit submit button.
+- Do not collect data without a configured submission destination. Wire the form to the project's approved backend, CRM, email API, or form provider.
+- Disable duplicate submission while the request is being sent and show a clear error message if delivery fails.
+- After a successful submission, replace the form state with this exact English confirmation: **“Thank you! We have received your request and will contact you soon.”**
+- The form must not claim success until the submission endpoint confirms receipt.
+- Non-conversion navigation links such as Blog, Documentation, Privacy, and RSS are not CTAs and should continue to navigate normally.
+
+QA checks:
+
+- Click every conversion CTA on desktop and mobile.
+- Confirm each CTA opens the correct form and preserves its context in a hidden `source` or `intent` field.
+- Submit valid test data and verify it reaches the configured destination.
+- Verify the exact English confirmation appears only after a successful response.
+- Test invalid input, backend failure, repeated clicks, Escape-to-close, focus trapping, and keyboard-only submission.
+
+## 9. Frontend Visual QA
 
 Check these pages manually:
 
@@ -186,7 +211,7 @@ Check these UI details:
 - code block overflow
 - awkward builder-like copy
 
-## 9. Final Go/No-Go Checks
+## 10. Final Go/No-Go Checks
 
 Go only if all are true:
 
@@ -201,7 +226,7 @@ Go only if all are true:
 - contact/docs pages work
 - no obviously broken contrast or overflow issues remain
 
-## 10. Fast Rollback Mindset
+## 11. Fast Rollback Mindset
 
 If something looks wrong after deploy:
 

@@ -1,43 +1,63 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import { getBlogPosts } from "@/lib/squidex";
+import { getCollection, type CollectionEntry } from "astro:content";
 
 export async function getStaticPaths() {
-  const posts = await getBlogPosts();
+  const posts = await getCollection("blog");
   return posts.map((post) => ({
     params: { slug: post.slug },
-    props: { post }
+    props: { post },
   }));
 }
 
-const { post } = Astro.props;
+type Props = { post: CollectionEntry<"blog"> };
+const { post } = Astro.props as Props;
+const { Content } = await post.render();
+const { data } = post;
+const inlineImages = data.inlineImages ?? [];
+const referenceUrl = data.referenceUrl?.trim() || "";
+const pubDate = data.pubDate;
 ---
 
-<Layout title={post.title} description={post.description}>
+<Layout title={data.title} description={data.description}>
   <nav class="breadcrumbs" aria-label="Breadcrumb">
     <ol>
       <li><a href="/">Home</a></li>
       <li><a href="/blog/">Blog</a></li>
-      <li><span aria-current="page">{post.title}</span></li>
+      <li><span aria-current="page">{data.title}</span></li>
     </ol>
   </nav>
   <article>
     <section class="section band">
       <div class="section-inner article-layout">
         <div>
-          <div class="article-body" set:html={post.articleText} />
-          {post.inlineImages.length > 0 && (
-            <div class="inline-images" aria-label="Article visuals">
-              {post.inlineImages.map((image) => <img src={image} alt="" loading="lazy" />)}
-            </div>
-          )}
+          <div class="article-body">
+            <Content />
+          </div>
+          {
+            inlineImages.length > 0 && (
+              <div class="inline-images" aria-label="Article visuals">
+                {inlineImages.map((image) => (
+                  <img src={image} alt="" loading="lazy" />
+                ))}
+              </div>
+            )
+          }
         </div>
         <aside class="card">
           <h2>Article details</h2>
-          <p><strong>Author</strong><br />{post.author}</p>
-          <p><strong>Published</strong><br />{new Date(post.pubDate).toLocaleDateString("ru-RU")}</p>
-          <p><strong>Tags</strong><br />{post.tags.join(", ")}</p>
-          {post.referenceUrl && <p><strong>Reference</strong><br /><a href={post.referenceUrl} target="_blank" rel="noreferrer">Open source</a></p>}
+          <p><strong>Author</strong><br />{data.author}</p>
+          <p><strong>Published</strong><br />{pubDate.toLocaleDateString("ru-RU")}</p>
+          <p><strong>Tags</strong><br />{data.tags.length ? data.tags.join(", ") : "—"}</p>
+          {
+            referenceUrl && (
+              <p>
+                <strong>Reference</strong>
+                <br />
+                <a href={referenceUrl} target="_blank" rel="noreferrer">Open source</a>
+              </p>
+            )
+          }
         </aside>
       </div>
     </section>
